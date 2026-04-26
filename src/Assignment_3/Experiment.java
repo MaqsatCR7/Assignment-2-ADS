@@ -12,7 +12,7 @@ public class Experiment {
     }
 
     public void runAllExperiments() {
-        // Тапсырма бойынша 10, 100, 1000 өлшемдері [cite: 56, 57, 58]
+        // Тапсырма бойынша 10, 100, 1000 өлшемдері 
         int[] sizes = {10, 100, 1000};
 
         for (int size : sizes) {
