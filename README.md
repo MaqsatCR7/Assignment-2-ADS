@@ -8,15 +8,25 @@
 <img width="1499" height="633" alt="image" src="https://github.com/user-attachments/assets/2d4a66d8-19a8-401d-917f-e659883ce28b" />
 <img width="1919" height="1070" alt="image" src="https://github.com/user-attachments/assets/96a9f352-f7e8-4c53-8cea-1c6a10e710c2" />
 
-📌 Project OverviewThis project focuses on the implementation of graph data structures and traversal algorithms in Java. The goal is to represent a graph using an Adjacency List and perform efficient searching using Breadth-First Search (BFS) and Depth-First Search (DFS) algorithms. The project also includes a performance analysis section to compare the efficiency of these algorithms across different graph sizes.
+# Assignment 4: Graph Traversal System
 
-🛠 Core Components
-1. Data Structures
-Vertex: Represents a node in the graph with a unique identifier.
-Edge: Represents a connection between a source vertex and a destination vertex.
-Graph: The main container that implements the Adjacency List using a Map<Integer, List<Integer>>.
+## Overview
+This project implements a Graph data structure using an **Adjacency List** and demonstrates two fundamental traversal algorithms: **BFS** and **DFS**.
 
-2. AlgorithmsBreadth-First Search (BFS): Explores the graph layer by layer. It uses a Queue (FIFO) to visit neighbors first.Complexity:$O(V + E)$
-1. Depth-First Search (DFS): Explores the graph by going as deep as possible before backtracking. It uses Recursion (Stack-based logic).Complexity: $O(V + E)$
+## Core Classes
+- **Vertex:** Represents a node with a unique ID.
+- **Edge:** Represents a connection between source and destination.
+- **Graph:** Manages the adjacency list and implements traversal logic.
+- **Experiment:** Measures execution time using `System.nanoTime()`.
 
-BFS vs DFSBFS is superior for finding the shortest path in unweighted graphs because it explores all nodes at distance $k$ before moving to $k+1$.DFS is more suitable for tasks like cycle detection and topological sorting. It is easier to implement recursively but can lead to StackOverflow on extremely deep graphs.
+## Algorithms
+- **BFS (Breadth-First Search):** Uses a Queue to explore neighbors layer by layer.
+- **DFS (Depth-First Search):** Uses Recursion to explore as deep as possible.
+
+## Results
+Based on my experiments:
+- **10 nodes:** Traversal is nearly instantaneous.
+- **100 nodes:** Execution time increases linearly, following $O(V+E)$ complexity.
+
+## Challenges
+Preventing infinite loops in cyclic graphs by implementing a proper `visited` tracking system.
